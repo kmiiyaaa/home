@@ -2,7 +2,6 @@ package com.kmii.dto;
 
 public class MemberDto {
 	
-	
 	private String memberid;
 	private String memberpw;
 	private String membername;
@@ -13,6 +12,18 @@ public class MemberDto {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	public MemberDto(String memberid, String memberpw, String membername, String memberemail) {
+		super();
+		this.memberid = memberid;
+		this.memberpw = memberpw;
+		this.membername = membername;
+		this.memberemail = memberemail;
+	}
+
+
 
 	public MemberDto(String memberid, String memberpw, String membername, String memberemail, String memberdate) {
 		super();

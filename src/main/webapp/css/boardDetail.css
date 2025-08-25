@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/* 색상 변수 */
+:root {
+  --bg: #fff;
+  --card: #fff;
+  --text: #111;
+  --muted: #555;
+  --line: #ddd;
+  --primary: #000;
+  --primary-hover: #333;
+  --danger: #dc3545;
+  --danger-hover: #a71d2a;
+  --radius: 6px;
+  --shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 메인 컨테이너 */
+main.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 카드 스타일 */
+.post-card {
+  background-color: var(--card);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 메타 정보 */
+.meta-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.meta-box span strong {
+  color: var(--text);
+}
+
+/* 글 제목 */
+.post-title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--primary);
+  margin: 10px 0;
+}
+
+/* 본문 내용 */
+.content-box {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  white-space: pre-wrap; /* 줄바꿈 유지 */
+  margin-bottom: 20px;
+}
+
+/* 버튼 영역 */
+.btn-box {
+  display: flex;
+  justify-content: flex-end; /* right -> flex-end로 표준화 */
+  gap: 15px;
+}
+
+/* 공통 버튼 스타일 */
+.btn-box a {
+  text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.btn-box a button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.btn-box a button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* 삭제 버튼 스타일 */
+.btn-box a .btn-delete {
+  background-color: var(--danger);
+}
+
+.btn-box a .btn-delete:hover {
+  background-color: var(--danger-hover);
+}
+
+/* 댓글 전체 컨테이너 */
+.comment-container {
+    display: flex;           /* 가로 배열 */
+    flex-wrap: wrap;         /* 화면 너비 넘어가면 다음 줄로 */
+    gap: 10px;               /* 댓글 사이 간격 */
+    margin-top: 20px;
+}
+
+/* 개별 댓글 박스 */
+.comment-card {
+    border: 1px solid #ccc;  /* 테두리 */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    min-width: 200px;        /* 최소 너비 */
+    flex: 1 1 200px;         /* 가로 확장 가능, 최소 200px */
+}
+
+/* 댓글 내부 요소 */
+.comment-author {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.comment-text {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.comment-date {
+    color: #777;
+    font-size: 0.9em;
+}
