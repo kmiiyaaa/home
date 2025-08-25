@@ -176,13 +176,11 @@ public class MemberDao {
 			  rs = pstmt.executeQuery();
 			  
 			  if(rs.next()) {  
-				  
-				member = new MemberDto(
-				rs.getString("memberid"),
-				 rs.getString("membername"),
-				 rs.getString("memberemail"),
-				 rs.getString("memberpw")
-				);  
+				  member = new MemberDto();
+				  member.setMemberid(rs.getString("memberid"));
+				  member.setMemberpw(rs.getString("memberpw"));
+				  member.setMembername(rs.getString("membername"));
+				  member.setMemberemail(rs.getString("memberemail"));
 			  }
 		  } catch(Exception e) {
 			
