@@ -229,7 +229,7 @@ public class MemberDao {
 	 
 		
 	} catch (Exception e) {
-		System.out.println("db 에러 발생"); 
+		System.out.println("db 에러 발생 회원정보 수정실패"); 
 		e.printStackTrace();  //에러 내용 출력
 		
 	} finally {  // finally : 에러 유무와 상관없이 무조건 실행할 내용 입력 -> 여기선 에러와 상관없이 커넥션 닫기

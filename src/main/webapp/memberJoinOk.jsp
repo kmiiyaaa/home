@@ -30,7 +30,7 @@
 				// 1(성공) 또는 0(실패) 반환
 				if(result == MemberDao.MEMBER_JOIN_SUCCESS) {
 					out.println("<script>alert('회원 가입 성공!');</script>");
-					
+					response.sendRedirect("login.do");
 				} else {
 					out.println("<script>alert('회원 가입 실패!');history.go(-1);</script>");
 				}
